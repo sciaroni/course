@@ -45,7 +45,7 @@ resource "aws_instance" "web" {
     subnet_id = "subnet-1a85e442"
     vpc_security_group_ids = ["sg-4dab302b"]
     tags {
-    Identity = ["${test-training-ape}"]
+    Identity = "test-training-ape"
     }
 }
 
