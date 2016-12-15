@@ -18,14 +18,6 @@
 #     test-training-ape
 #
 
-data "terraform_remote_state" "sciaroni" {
-    backend = "atlas"
-    config {
-        name = "sciaroni/course"
-        access_token = "SZhyfyEt9nOzzg.atlasv1.00l5W8VrgUZBc0Qc22xIA7wBKpque4OxBZSEUX2gjYTF9WXwFrU7fJu5nwL4TBoUTGI"
-    }
-}
-
 
 
 module "example-module" {
@@ -47,7 +39,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web" {
-    count = 3
+    count = 2
     ami = "ami-65b69116"
     instance_type = "t2.micro"
     subnet_id = "subnet-1a85e442"
